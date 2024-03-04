@@ -58,7 +58,7 @@ function App() {
 
   return (
     <div className='flex flex-col h-screen relative'>
-      <img src="../public/img/hero_img.jpg" alt="Hero image" className='aspect-video fixed w-screen top-0 left-0 h-2/3 -z-10'/>
+      <img src="./img/hero_img.jpg" alt="Hero image" className='aspect-video fixed w-screen top-0 left-0 h-2/3 -z-10'/>
 
       <div className='absolute left-5 lg:left-[72px] md:left-[72px] right-5 lg:right-[72px] md:right-[72px] top-[96px] flex flex-col items-center gap-10'>
         <div><Logo /></div>
