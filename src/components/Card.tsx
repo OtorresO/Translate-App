@@ -36,21 +36,8 @@ interface PropsCard {
         >>
     },
     translate?: () => void,
-    /* text?: string | undefined,
-    translatedText?: string | undefined,
-    initialLanguage: string,
-    langOrigin?: string | '',
-    langDestination?: string | '',
-    translate?: () => void,
-    onCopy: (e: string) => void,
-    setText?: ((e: string) => void),
-    setTranslatedText?: React.Dispatch<React.SetStateAction<string>>,
-    setLangOrigin?: React.Dispatch<React.SetStateAction<string>>,
-    setLangDestination?: React.Dispatch<React.SetStateAction<string>> */
 }
 export default function Card({ navTabOptions, dataOrigin, dataDestination, cardOrigin = true, setData, translate/* text, translatedText, langOrigin, langDestination, setText, setTranslatedText, setLangOrigin, setLangDestination, initialLanguage, translate, onCopy */ }: PropsCard) {
-    /* const [activeTab, setActiveTab] = useState(data.lang); */
-
 
     const onClickTab = (newLang: string) => {
         cardOrigin ? setData.setOrigin({ ...dataOrigin, lang: newLang, tabActive: newLang }) : setData.setDestination({ ...dataDestination, lang: newLang, tabActive: newLang })
@@ -59,9 +46,6 @@ export default function Card({ navTabOptions, dataOrigin, dataDestination, cardO
     const onClickDropDown = (tab: string, newLang: string) => {
         cardOrigin ? setData.setOrigin({ ...dataOrigin, lang: newLang, tabActive: tab }) : setData.setDestination({ ...dataDestination, lang: newLang, tabActive: tab })
     }
-
-
-
 
     const changeInfoToTranslate = () => {
         setData.setOrigin({ ...dataDestination })
@@ -101,9 +85,6 @@ export default function Card({ navTabOptions, dataOrigin, dataDestination, cardO
                 {
                     cardOrigin ? null : <ButtonArrow onClick={changeInfoToTranslate} />
                 }
-
-
-
             </div>
             <div>
                 <textarea className='w-full h-40 min-h-40 
