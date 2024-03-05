@@ -6,9 +6,9 @@ export default defineConfig({
   plugins: [react()],
 
   /* WHITOUT DOMAIN */
-  base:'/Translate-App/'
+  /* base:'/Translate-App/' */
 
   /* WITH DOMAIN */
- /*  base: '/' */
+  base: '/'
 
 })
